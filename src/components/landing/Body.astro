@@ -1,0 +1,114 @@
+---
+import { otherprojects } from "../../data/otherprojects.json";
+---
+
+<section class="bg-primary">
+  <div class="px-8 2xl:max-w-7xl mx-auto py-6 text-lg">
+    <div class="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6">
+      <p
+          class="text-xl lg:col-start-1 leading-relaxed"
+          data-aos="fade-up"
+          data-aos-duration="2000">
+        Notre projet est une architecture de raytracing répartie qui fonctionne de manière dynamique et efficace. Elle se compose d'un serveur central qui gère les connexions des nouveaux nœuds de calcul. Les nœuds de calcul, pour se connecter, envoient leurs services au serveur central en utilisant l'adresse IP et le port de l'annuaire du serveur central.
+      </p>
+      <p
+          class="text-xl lg:col-start-2 lg:col-span-2 mt-8 leading-relaxed underline underline-offset-4"
+          data-aos="fade-up"
+          data-aos-duration="2500">
+        Une fois connectés, les nœuds de calcul localisent le service du serveur central grâce à son nom dans l'annuaire. Le serveur central se charge principalement de maintenir une liste à jour des nœuds de calcul connectés et est capable de les distribuer sur demande, en envoyant toujours le prochain nœud de sa liste. Lorsqu'un ou plusieurs clients ont besoin de plus de puissance de calcul pour générer des images, ils demandent au serveur central de leur fournir l'adresse d'un nœud de calcul.
+      </p>
+      <p
+          class="text-xl lg:col-start-4 leading-relaxed"
+          data-aos="fade-up"
+          data-aos-duration="2500">
+        Le client demande ensuite au nœud de calcul de réaliser le calcul requis. Toute déconnexion est gérée par le client : si une demande à un nœud de calcul reste sans réponse, le client signale au serveur central que le nœud n'est plus connecté. Ainsi, notre architecture garantit une utilisation efficace des ressources disponibles pour produire des images de haute qualité grâce au raytracing.
+      </p>
+    </div>
+  </div>
+
+
+
+  <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+    <div class="space-y-2">
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000">
+      </div>
+      <h3
+        class="text-secondary text-xs font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500">
+        <span>Schéma</span>
+        <iframe style="border:none" width="1280" height="700" src="https://whimsical.com/embed/LKyHXk2ygY5MiJQgZJ7X1o"></iframe>
+      </h3>
+    </div>
+    <ul
+      class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary md:grid-cols-3 lg:grid-cols-3 items-start gap-6 mt-32"
+      role="list">
+      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="1500">
+        <a href="../../../rsc/client.zip">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <p
+                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                01.
+              </p>
+              <p class="italic shrink-0">Client(s)</p>
+              <p class="text-xs mt-3 leading-relaxed">
+                Interagit avec les utilisateurs, demande des calculs aux nœuds et gère les déconnexions.
+              </p>
+            </div>
+            <div>
+              <p class="mt-3 text-xs font-semibold">
+                Télécharger les fichiers liés au(x) client(s) ↗
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2000">
+        <a href="../../../rsc/serveur.zip">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <p
+                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                02.
+              </p>
+              <p class="italic shrink-0">Serveur central</p>
+              <p class="text-xs mt-3 leading-relaxed">
+                Gère les connexions des nœuds de calcul, maintient une liste à jour de ces nœuds et la fournit aux clients.
+              </p>
+            </div>
+            <div>
+              <p class="mt-3 text-xs font-semibold">
+                Télécharger les fichiers liés au serveur central↗
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2500">
+        <a href="../../../rsc/serviceCalcul.zip">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <p
+                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                03.
+              </p>
+              <p class="italic shrink-0">Noeud de calcul</p>
+              <p class="text-xs mt-3 leading-relaxed">
+                Effectue les calculs de raytracing et renvoie les résultats au client.
+              </p>
+            </div>
+            <div>
+              <p class="mt-3 text-xs font-semibold">
+                Télécharger les fichiers liés au noeud de calcul↗
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+</section>
